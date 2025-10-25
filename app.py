@@ -11,8 +11,8 @@ def ussd():
     text         = request.values.get("text", "default")
 
     if text == '':
-        response = "CON Welcome Grace MFI:"
-        response +="\n1. Borrow loan\n2. Repay Loan\n3. Buy Airtime\n4. Buy Bundles\n5. Check Balance"
+        response = "CON Welcome Grace MFI:" \
+        "\n1. Borrow loan\n2. Repay Loan\n3. Buy Airtime\n4. Buy Bundles\n5. Check Balance"
     elif text == '1':
         response = "CON You've successfully Borrowed KES 10,000\n0. Home"
     elif text == "2":
@@ -34,7 +34,7 @@ def ussd():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
 
 
 
