@@ -12,17 +12,20 @@ def ussd():
 
     if text == '':
         response = "CON Welcome Grace MFI:"
-        response +="1. Borrow loan\n2. Repay Loan\n3. Buy Airtime\n4. Buy Bundles\n5. Check Balance"
+        response +="\n1. Borrow loan\n2. Repay Loan\n3. Buy Airtime\n4. Buy Bundles\n5. Check Balance"
     elif text == '1':
-        response = "CON You've successfully Borrowed KES 10,000"
+        response = "CON You've successfully Borrowed KES 10,000\n0. Home"
     elif text == "2":
-        response = "CON You've successfully repayed KES 10,000 loan"
+        response = "CON You've successfully repayed KES 10,000 loan\n0. Home"
     elif text == "3":
-        response = "CON You've successfully bought KES 10,000 airtime"
+        response = "CON You've successfully bought KES 10,000 airtime\n0. Home"
     elif text == "4":
-        response = "CON You've successfully bought 500 MBs"
+        response = "CON You've successfully bought 500 MBs\n0. Home"
     elif text == "5":
-        response = "CON Your balance is KES 10,000"
+        response = "CON Your balance is KES 10,000\n0. Home"
+    elif text == "0":
+        response = "CON Welcome Grace MFI:"
+        response +="\n1. Borrow loan\n2. Repay Loan\n3. Buy Airtime\n4. Buy Bundles\n5. Check Balance"
     else:
         response = "END Invalid Input"
 
